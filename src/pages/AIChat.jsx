@@ -38,7 +38,7 @@ const submitChat = async (e) => {
 
 
   return (
-    <div className="card card-primary card-outline" style={{ height: "90vh"}}>
+    <div className="card card-primary card-outline" style={{ height: "80vh"}}>
       <div
         className="card-body"
         style={{ height: "100%", overflow: "scroll", overflowX:"hidden" }}
