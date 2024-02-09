@@ -39,7 +39,8 @@ const submitChat = async (e) => {
 
   return (
     <div className="card card-primary card-outline" style={{ height: "80vh"}}>
-      <div
+    <div className="card-header">Riktam AI Chat</div> 
+    <div
         className="card-body"
         style={{ height: "100%", overflow: "scroll", overflowX:"hidden" }}
       >
