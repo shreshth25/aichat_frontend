@@ -33,6 +33,12 @@ const Sidebar = () => {
           <p>Emotion Analyzer</p>
         </NavLink>
         </li>
+        <li className="nav-item">
+        <NavLink to="/story" className="nav-link">
+          <i className="far fa-circle nav-icon" />
+          <p>Story Teller</p>
+        </NavLink>
+        </li>
         </ul>
       </nav>
     </div>

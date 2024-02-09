@@ -2,7 +2,7 @@ import React, { useEffect, useState, useRef } from "react";
 import { postAPI } from "../helpers/api";
 import gif from '/30.gif'
 
-const EmotionChat = () => {
+const StoryChat = () => {
   const url = import.meta.env.VITE_REACT_APP_IMAGE_URL;
   const ref = useRef(null);
   const [messages, setMessages] = useState('');
@@ -19,10 +19,8 @@ const submitChat = async (e) => {
     }
 
     try {
-        const res = await postAPI("chat/analyze", data);
-        console.table(res.message)
+        const res = await postAPI("chat/story", data);
         setMessages(res.message)
-        setChat("");
         setIsLoading(false)
 
     } catch (error) {
@@ -34,8 +32,8 @@ const submitChat = async (e) => {
 
 
   return (
-    <div className="card card-danger card-outline" style={{ height: "80vh"}}>
-     <div className="card-header">Riktam AI Emotion Analyzer</div>
+    <div className="card card-warning card-outline" style={{ height: "80vh"}}>
+     <div className="card-header">Riktam AI Story Teller</div>
       <div
         className="card-body"
         style={{ height: "100%", overflow: "scroll", overflowX:"hidden" }}
@@ -51,7 +49,7 @@ const submitChat = async (e) => {
             <input
               type="text"
               name="message"
-              placeholder="Type Message For Emotion Analyzer..."
+              placeholder="Type Message For Story..."
               className="form-control"
               value={chat}
               onChange={(e) => {
@@ -70,4 +68,4 @@ const submitChat = async (e) => {
   );
 };
 
-export default EmotionChat;
+export default StoryChat;
